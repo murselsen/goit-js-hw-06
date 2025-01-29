@@ -2,8 +2,8 @@ console.log('~~~~~~~~~ Task 3: ~~~~~~~~~');
 
 class StringBuilder {
   #value;
-  constructor(value) {
-    this.#value = value;
+  constructor(str) {
+    this.#value = str;
   }
   getValue() {
     return this.#value;
@@ -15,7 +15,8 @@ class StringBuilder {
     this.#value = str + this.#value;
   }
   padBoth(str) {
-    this.#value = str + this.#value + str;
+    this.padStart(str);
+    this.padEnd(str);
   }
 }
 
